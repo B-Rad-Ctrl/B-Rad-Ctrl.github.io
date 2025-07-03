@@ -58,6 +58,6 @@ button {
 
 
 
-.button:active {
+button:hover {
   background-color:  white; 
   color: lightcoral;}
