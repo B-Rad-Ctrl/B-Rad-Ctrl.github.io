@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleanor!!</title>
+    <link rel="stylesheet" href="Eleanor.css">
+</head>
+
+
+<body>
+    <audio id="scaryAudio" loop>
+        <source src="scary.mp3" type="audio/mpeg">
+</audio>
+<h2>Click to turn on the lights...</h2>
+<script>
+  document.addEventListener("click", function () {
+    document.getElementById("scaryAudio").play();
+
+    document.body.classList.add("revealed");
+    document.querySelector("h2").classList.add("hidden");
+
+    document.querySelector("h1").classList.remove("hidden");
+    document.querySelector("img").classList.remove("hidden");
+    document.querySelector("footer").classList.remove("hidden");
+  }, { once: true });
+</script>
+
+    <h1 class="hidden">IT'S ELEANOR!</h1>
+    <img class="hidden" src="Eleanor.png" alt="Eleanor Image" width="600" height="600">
+</body>
+<footer class="hidden">
+    <p>&copy; 2099 Eleanor. All rights reserved. Send horsie photos to horsie@eleanor.com</p>
