@@ -3,6 +3,7 @@
     src: url('scary.ttf') format('truetype');
     text-decoration: none;
 }
+
 body {
     background-color: black;
     font-family: scary, sans-serif;
@@ -16,8 +17,37 @@ body {
 
 body.revealed {
     background-image: url("Eleanor.gif");
+    background-size:auto;
+    background-repeat: repeat;
 }
 
+img {
+    max-width: 80%;
+    max-height: 20%;
+}
 .hidden {
     display: none;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    img {
+        max-width: 80%;
+        max-height: 20%;
+    }
+    button {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+    footer p {
+        font-size: 12px;
+    }
 }

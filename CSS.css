@@ -4,6 +4,28 @@
     text-decoration: none;
 }
 
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    img {
+        max-width: 100%;
+        max-height: 40%;
+    }
+    button {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+    footer p {
+        font-size: 6px;
+    }
+}
 body {
     background-color: lightblue;
     font-family: comicsans, sans-serif;
@@ -16,6 +38,10 @@ body {
 h1 {
     font-size: 50px;
     
+}
+h2 {
+    font-size: 30px;
+
 }
 
 button {
@@ -32,6 +58,6 @@ button {
 
 
 
-.button:hover {
+.button:active {
   background-color:  white; 
   color: lightcoral;}
