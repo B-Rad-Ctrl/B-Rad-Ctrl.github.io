@@ -7,16 +7,17 @@
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eleanor!!</title>
+    <title>Who could it be now?!</title>
+    <link rel="icon" href="favicon2.ico" type="image/x-icon">
     <link rel="stylesheet" href="Eleanor.css">
 </head>
 
 
 <body>
-    <audio id="scaryAudio" loop>
-        <source src="scary.mp3" type="audio/mpeg">
+    <audio id="scaryAudio">
+        <source src="scary.mp3" type="audio/mpeg" volume="0.5">
 </audio>
-<h2>Click to turn on the lights...</h2>
+<h2 class="center">Click to turn on the lights...</h2>
 <script>
   document.addEventListener("click", function () {
     document.getElementById("scaryAudio").play();
@@ -24,14 +25,24 @@
     document.body.classList.add("revealed");
     document.querySelector("h2").classList.add("hidden");
 
-    document.querySelector("h1").classList.remove("hidden");
+    const image = document.getElementById("eleanorImage");
+    image.classList.remove("hidden");
+    image.classList.add("jumpscare");
+  
     document.querySelector("img").classList.remove("hidden");
+
+    image.addEventListener("animationend", function () {
+      document.querySelector("h1").classList.remove("hidden");
+    document.querySelector("h3").classList.remove("hidden");
     document.querySelector("footer").classList.remove("hidden");
+    });
+    
   }, { once: true });
 </script>
+    <img id="eleanorImage" class="hidden" src="Eleanor.png" alt="Eleanor Image" width="600" height="600">
 
-    <h1 class="hidden">IT'S ELEANOR!</h1>
-    <img class="hidden" src="Eleanor.png" alt="Eleanor Image" width="600" height="600">
-</body>
+    <h1 id="prompt" class="hidden">Unnamed evildoer is behind you!</h1>
+    <h3 id="prompt" class="hidden">You will be missed...</h3>
+  </body>
 <footer class="hidden">
-    <p>&copy; 2099 Eleanor. All rights reserved. Send horsie photos to horsie@eleanor.com</p>
+    <p>&copy; 2099 Unnamed evildoer. All rights reserved. Send horsie photos to horsie@unnamedevildoer.com</p>
